@@ -4,31 +4,40 @@
   <title>My Final Promise</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-love center">
 
   <h1>💖 My Forever Promise 💖</h1>
 
   <p class="final-note">
-    I promise to love you on easy days,<br>
-    and hold you tighter on hard ones.<br><br>
-    I promise to fight with you,<br>
-    not against you.<br><br>
-    No matter what life brings,<br>
-    my heart will always choose you. 💞
+    I promise to choose you every day,
+    in every version of life.
   </p>
 
-  <!-- Ishq Ve autoplay -->
- <div id="music">
-  <iframe
-    src="https://www.youtube.com/embed/3F2Z7xY6pYo?enablejsapi=1"
-    width="0"
-    height="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
-</div>
+  <!-- BUTTON -->
+  <button id="playMusic" class="play-btn">
+    Tap to feel our promise 💖
+  </button>
 
+  <!-- MUSIC -->
+  <div id="music">
+    <iframe
+      src="https://www.youtube.com/embed/3F2Z7xY6pYo?enablejsapi=1"
+      width="0"
+      height="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
 
+  <!-- SCRIPT -->
+  <script>
+    document.getElementById("playMusic").addEventListener("click", function () {
+      const iframe = document.querySelector("#music iframe");
+      iframe.src = iframe.src + "&autoplay=1";
+      this.style.display = "none";
+    });
+  </script>
 
 </body>
 </html>
