@@ -1,41 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Final Promise</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>My Final Promise 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffd1dc, #ffe6eb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      color: #c2185b;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .hint {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      font-style: italic;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
 </head>
 
-<body class="bg-love center">
+<body>
 
-  <h1>💖 My Forever Promise 💖</h1>
+  <div class="container">
+    <h1>💖 My Forever Promise 💖</h1>
 
-  <p class="final-note">
-    I promise to choose you every day,
-    in every version of life.
-  </p>
+    <p>
+      I promise to hold your hand in chaos and calm.<br>
+      To choose you on easy days and harder ones.<br><br>
 
-  <!-- BUTTON -->
-  <button id="playMusic" class="play-btn">
-    Tap to feel our promise 💖
-  </button>
+      With you, love feels like home.<br>
+      And today, tomorrow, always — I choose *us*.
+    </p>
+
+    <div class="hint">
+      (Tap anywhere to feel the promise 🎶)
+    </div>
+  </div>
 
   <!-- MUSIC -->
   <div id="music">
     <iframe
-      src="https://www.youtube.com/embed/3F2Z7xY6pYo?enablejsapi=1"
+      src="https://www.youtube.com/embed/MJyKN-8UncM?enablejsapi=1"
       width="0"
       height="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
+      allow="autoplay; encrypted-media">
     </iframe>
   </div>
 
   <!-- SCRIPT -->
   <script>
-    document.getElementById("playMusic").addEventListener("click", function () {
-      const iframe = document.querySelector("#music iframe");
-      iframe.src = iframe.src + "&autoplay=1";
-      this.style.display = "none";
+    let musicPlayed = false;
+
+    document.body.addEventListener("click", function () {
+      if (!musicPlayed) {
+        const iframe = document.querySelector("#music iframe");
+        iframe.src = iframe.src + "&autoplay=1";
+        musicPlayed = true;
+      }
     });
   </script>
 
