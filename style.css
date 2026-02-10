@@ -90,3 +90,15 @@ h1, h2 {
   color: #6a0572;
   max-width: 500px;
 }
+
+.play-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  background: linear-gradient(135deg, #ff4d6d, #ff8fa3);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.4);
+  margin-top: 30px;
+}
